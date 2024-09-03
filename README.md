@@ -11,10 +11,12 @@ Django
 
 python -m venv venv
 
-run source "venv/Scripts/activate" first or nothing else will work
+run "source venv/Scripts/activate" first or nothing else will work
 
 pip install django
 
 python manage.py startapp home
 
 to run the server "python manage.py runserver"
+
+deactivate

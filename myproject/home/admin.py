@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import ProjectLink
 
-# Register your models here.
+@admin.register(ProjectLink)
+class ProjectLinkAdmin(admin.ModelAdmin):
+    list_display = ('title', 'url')

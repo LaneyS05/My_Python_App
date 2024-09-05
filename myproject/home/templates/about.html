@@ -3,26 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>About Me</title>
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <!--<link rel="stylesheet" href="{% static 'css/links.css' %}" />-->
   </head>
   <body>
-    <nav>
+    <nav class="nav">
       <a class="nav-link" href="{% url 'home' %}">Home</a>
       <a class="nav-link" href="{% url 'link' %}">My Projects</a>
       <a class="nav-link" href="{% url 'about' %}">About Me</a>
     </nav>
-    <h1>Project links</h1>
-    <ul>
-      {% for link in links %}
-      <li class="project-link">
-        <a href="{{ link.url }}">{{ link.title }}</a> - {{ link.description }}
-      </li>
-      {% endfor %}
-    </ul>
   </body>
 </html>

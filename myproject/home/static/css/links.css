@@ -1,0 +1,16 @@
+.project-link {
+    font-size: 16px;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 3px;
+    list-style: none;
+  }
+  
+  .project-link a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .project-link a:hover {
+    color: darkgray;
+  }

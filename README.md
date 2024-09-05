@@ -19,4 +19,6 @@ python manage.py startapp home
 
 to run the server "python manage.py runserver"
 
+use "python manage.py livereload" to make changes while the server is running - this can be usful when working with sass or css
+
 deactivate

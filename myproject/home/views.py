@@ -7,3 +7,6 @@ def home_view(request):
 def link_page(request):
     links = ProjectLink.objects.all()
     return render(request, 'link.html', {'links': links})
+
+def about_page(request):
+    return render(request, 'about.html')

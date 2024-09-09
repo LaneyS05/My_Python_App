@@ -4,9 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <style>
+      body {
+        background-color: #edf0ef;
+      }
+      #my-image {
+        position: absolute;
+        right: 30px;
+        top: 100px;
+        width: 500px;
+        height: auto;
+      }
+    </style>
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="pic" href="{% static 'assets/girl.webp' %}" />
   </head>
   <body>
     <nav class="nav">
@@ -14,5 +27,6 @@
       <a class="nav-link" href="{% url 'link' %}">My Projects</a>
       <a class="nav-link" href="{% url 'about' %}">About Me</a>
     </nav>
+    <img id="my-image" src="../static/assets/girl.webp" />
   </body>
 </html>

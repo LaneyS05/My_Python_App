@@ -1,4 +1,6 @@
-
+body{
+  background-color: rgba(241,241,239,255);
+}
 
 nav {
     border-radius: 5px;
@@ -34,4 +36,4 @@ nav {
   .project-link a:hover {
     color: darkgray;
   }
-  
+

@@ -1,5 +1,5 @@
 body {
-  background-color: rgba(241,241,239,255) !important;
+  background-color: rgba(241,241,239,255);
 }
 
 p {
@@ -9,11 +9,11 @@ p {
 }
 
 .my-image {
-  position: absolute !important;
-  right: 30px !important;
-  top: 100px !important;
-  width: 500px !important;
-  height: auto !important;
+  position: absolute;
+  right: 30px;
+  top: 100px;
+  width: 500px;
+  height: auto;
 }
 
 nav {
@@ -67,21 +67,32 @@ nav {
 }
 
 .mail {
-  position: absolute !important;
-  bottom: 5px;
-  left: 10px !important;
-  width: 30px !important;
-  height: 30px !important;
-  padding: 2px !important;
-  margin: 3px !important;
-  display: flex; /* Align icon within the button */
+  position: absolute;
+  bottom: 2px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  padding: 2px;
+  margin: 3px;
+  display: flex; 
   align-items: center;
   justify-content: center;
 }
 
-/* Correct selector for Font Awesome icon */
 .mail i {
-  font-size: 20px; /* Increase the icon size */
+  font-size: 20px; 
+  align-items: center;
+  justify-content: center;
 }
 
+.ghost{
+  position: absolute;
+  bottom: 60px;
+  left: 10px;
+}
 
+.ghost i {
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+}

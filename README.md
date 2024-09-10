@@ -5,20 +5,36 @@ about myself and to where futer recuters can easaly accses my best work
 
 ## Tools
 
-Django
+- **Django**
+
+- **Font Awesome**  
+  To link Font Awesome, use this link:  
+  [Font Awesome CDN](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css)
 
 ## Dependencies
 
-python -m venv venv
+1. **Create Virtual Environment**  
+   To create a virtual environment, run:
 
-run "source venv/Scripts/activate" first or nothing else will work
+   ```bash
+   python -m venv venv
 
-pip install django
+   ```
 
-python manage.py startapp home
+2. **Run "source venv/Scripts/activate"**
+   if this is not run first nothing else will work
 
-to run the server "python manage.py runserver"
+3. **Run "pip install django"**
+   With the virtual environment activated, install Django
 
-use "python manage.py livereload" to make changes while the server is running - this can be usful when working with sass or css
+4. **Run "python manage.py startapp home"**
+   To create a new Django app called home
 
-deactivate
+5. **Run the Server**
+   to run the server use "python manage.py runserver"
+
+6. **Live Reloading**
+   run "python manage.py livereload" to make changes while the server is running
+
+7. **Deactivate Virtual Environment**
+   run "deactivate" to deactivate the environment

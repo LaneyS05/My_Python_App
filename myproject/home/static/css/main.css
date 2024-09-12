@@ -6,6 +6,8 @@ p {
   width: 300px;
   height: auto;
   font-size: large;
+  padding: 5px;
+  margin: 5px;
 }
 
 .my-image {

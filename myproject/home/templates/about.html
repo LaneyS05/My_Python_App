@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Me</title>
+    <!-- Add Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
@@ -24,5 +29,15 @@
       I created this Django app to easily showcase my work and demonstrate the
       skills I have developed.
     </p>
+    <footer>
+      <nav class="foot">
+        <button
+          class="mail"
+          onclick="window.location.href='mailto:your-email@example.com?subject=Contact%20Laney&body=Hi%20Laney,';"
+        >
+          <i class="fa-regular fa-envelope"></i>
+        </button>
+      </nav>
+    </footer>
   </body>
 </html>

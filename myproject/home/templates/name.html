@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <title>Name Entry</title>
 
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
     <!-- Add Font Awesome CDN -->
     <link
       rel="stylesheet"
@@ -20,11 +21,28 @@
       <a class="nav-link" href="{% url 'about' %}">About Me</a>
       <a class="nav-link" href="{%url 'name' %}">Name Entry</a>
     </nav>
-    <img class="my-image" src="{% static 'assets/girl.jpg' %}" />
+
+    <!-- home/templates/home/name_page.html -->
+    <h3>
+      You're welcome to enter your name in the box below and click submit.
+    </h3>
+    <h2>Please enter your name:</h2>
+    <form method="post" action="{% url 'name' %}">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="Enter your name" />
+      <button type="submit">Submit</button>
+      {% if error %}
+      <p style="color: red">{{ error }}</p>
+      {% endif %}
+    </form>
+    <h3>
+      This helps the developer track how many people have visited the site.
+    </h3>
     <p>
-      Hi, I'm Laney Staggs, a Front-End and Python Developer passionate about
-      creating unique and professional web experiences.
+      After submitting, your name will be added to a secure database, accessible
+      only to the developer.
     </p>
+
     <footer>
       <nav class="foot">
         <button

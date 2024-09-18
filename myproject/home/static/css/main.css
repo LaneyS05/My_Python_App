@@ -64,13 +64,13 @@ nav {
   bottom: 5px;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 35px;
   justify-content: center; 
 }
 
 .mail {
   position: absolute;
-  bottom: 2px;
+  bottom: 10px;
   left: 10px;
   width: 30px;
   height: 30px;

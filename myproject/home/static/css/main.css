@@ -1,13 +1,18 @@
 body {
-  background-color: rgba(241,241,239,255);
+  background-color: #F5F5F5;
 }
 
 p {
   width: 300px;
   height: auto;
-  font-size: large;
+  font-size: larger;
   padding: 5px;
   margin: 5px;
+  color: #2E8B57;
+}
+
+h1{
+  color: #8C7853;
 }
 
 .my-image {
@@ -20,7 +25,7 @@ p {
 
 nav {
   border-radius: 5px;
-  background-color: rgb(85, 83, 184);
+  background-color: #003366;
   padding: 10px;
   display: flex;
   gap: 10px;
@@ -34,6 +39,7 @@ nav {
   padding: 10px;
   text-decoration: none;
   font-size: larger;
+  background-color: #003366;
 }
 
 .project-link {
@@ -55,7 +61,7 @@ nav {
 
 .foot {
   border-radius: 5px;
-  background-color: rgb(85, 83, 184);
+  background-color: #003366;
   padding: 10px;
   display: flex;
   gap: 10px;
@@ -97,4 +103,10 @@ nav {
   font-size: 20px;
   align-items: center;
   justify-content: center;
+}
+
+.goddess{
+  position: absolute;
+  bottom: 60px;
+  left: 690px;
 }

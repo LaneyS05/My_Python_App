@@ -9,10 +9,10 @@
   }
   
   .project-link a {
-    color: rgb(85, 83, 184);
+    color: #808000 ;
     text-decoration: underline;
   }
   
   .project-link a:hover {
-    color: darkgray;
+    color: #E2725B; 
   }

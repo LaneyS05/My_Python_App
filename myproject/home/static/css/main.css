@@ -110,3 +110,12 @@ nav {
   bottom: 60px;
   left: 690px;
 }
+
+.imgs {
+  width: 70px;       /* Keep your width */
+  height: 70px;      /* Keep your height */
+  margin-left: 10px; /* Adjust margin to create space between the image and links */
+  position: absolute;
+  right: 20px;
+  color: aliceblue;
+}

@@ -26,18 +26,21 @@ def name_page(request):
             return render(request, 'name_page.html', {'error': "Your name is too long."})
         else:
             Name.objects.create(name=user_name)
-            return redirect('home')  # Redirect to a success page or another view
+            return redirect('home')  
 
     return render(request, 'name.html')
 
 def send_email(request):
     if request.method == 'POST':
         message = request.POST.get('message')
+        user_email = request.POST.get('email')  
+
         send_mail(
             'New Contact Message',
             message,
-            settings.DEFAULT_FROM_EMAIL,
-            ['laney.staggs05@gmail.com'],  # Replace with your email
+            user_email,
+            ['laney.staggs05@gmail.com'],
         )
         return render(request, 'email_sent.html')
+    
     return render(request, 'email_sent.html')

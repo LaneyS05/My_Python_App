@@ -21,12 +21,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-gfr9d%nubu+lh9qm#foqk50j_i545q_ljdg6hfmy%_ilzw%20='
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+#debug = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['my-python-app.vercel.app']
 
 
 # Application definition
@@ -52,6 +54,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #'django.contrib.staticfiles.middleware.StaticFilesMiddleware',
     'livereload.middleware.LiveReloadScript',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 # Email settings
@@ -59,8 +62,8 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'  # Use Gmail's SMTP server
 EMAIL_PORT = 587  # TLS port
 EMAIL_USE_TLS = True  # Use TLS for security
-EMAIL_HOST_USER = 'your-email@gmail.com'  # Your actual Gmail address
-EMAIL_HOST_PASSWORD = 'your-email-password'  # Your Gmail password or App Password
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 DEFAULT_FROM_EMAIL = 'your-email@gmail.com'  # This should match your host user
 
 
@@ -96,7 +99,7 @@ DATABASES = {
 }
 
 
-# Password validation
+# Password validation ALLOWED_HOSTS = ['your-app-name.vercel.app']
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [

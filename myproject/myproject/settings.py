@@ -28,7 +28,7 @@ DEBUG = False
 #debug = True
 
 #ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-ALLOWED_HOSTS = ['my-python-app.vercel.app']
+ALLOWED_HOSTS = ['https://my-python-app-delta.vercel.app/']
 
 
 # Application definition

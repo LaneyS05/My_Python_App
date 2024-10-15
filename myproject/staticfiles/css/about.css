@@ -1,0 +1,16 @@
+.me_img{
+  position: absolute;
+  right: 30px;
+  top: 97px;
+  width: 400px;
+  height: 530px;
+  border-radius: 20pc;
+}
+
+.career{
+  width: 700px;
+  height: 20px;
+  padding: 5px;
+  margin: 5px;
+  font-size: larger;
+}

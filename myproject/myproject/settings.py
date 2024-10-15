@@ -24,10 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'your-default-secret-key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-#DEBUG = True
+#DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['my-python-hia6l0xqj-laneys05s-projects.vercel.app']
+ALLOWED_HOSTS = ['my-python-hia6l0xqj-laneys05s-projects.vercel.app', 'localhost', '127.0.0.1']
+
 
 
 
@@ -137,8 +138,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # or your chosen directory
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'your_static_dir'),  # add paths to your static files
+    BASE_DIR / "home/static",  # Update this path to match your actual static files directory
 ]
+
 
 
 

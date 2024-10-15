@@ -1,9 +1,13 @@
-from django.urls import path
-from .views import home_view, link_page, about_page, name_page
+from django.shortcuts import render
 
-urlpatterns = [
-    path('', home_view, name='home'),
-    path('links/', link_page, name='link'),
-    path('about/', about_page, name='about'),
-    path('name/', name_page, name='name')
-] 
+def home_view(request):
+    return render(request, 'home.html')  # Ensure this template exists
+
+def link_page(request):
+    return render(request, 'links.html')  # Ensure this template exists
+
+def about_page(request):
+    return render(request, 'about.html')  # Ensure this template exists
+
+def name_page(request):
+    return render(request, 'name.html')  # Ensure this template exists

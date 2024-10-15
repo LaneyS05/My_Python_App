@@ -46,16 +46,16 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',  
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #'django.contrib.staticfiles.middleware.StaticFilesMiddleware',
-    'livereload.middleware.LiveReloadScript',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #'livereload.middleware.LiveReloadScript',  # Consider removing in production
 ]
+
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -138,6 +138,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'home', 'static'),
     # Add more directories here if needed
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 # Default primary key field type

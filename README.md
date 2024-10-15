@@ -38,3 +38,6 @@ about myself and to where futer recuters can easaly accses my best work
 
 7. **Deactivate Virtual Environment**
    run "deactivate" to deactivate the environment
+
+8. **Install Versel**
+   run "npm install -g vercel" to install

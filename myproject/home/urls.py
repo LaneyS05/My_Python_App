@@ -1,13 +1,11 @@
-from django.shortcuts import render
+#home/urls.py
+from django.urls import path
+from . import views  # Import views from the current package
 
-def home_view(request):
-    return render(request, 'home.html')  # Ensure this template exists
-
-def link_page(request):
-    return render(request, 'links.html')  # Ensure this template exists
-
-def about_page(request):
-    return render(request, 'about.html')  # Ensure this template exists
-
-def name_page(request):
-    return render(request, 'name.html')  # Ensure this template exists
+urlpatterns = [
+    path('', views.home_view, name='home'),
+    path('links/', views.link_page, name='links'),
+    path('about/', views.about_page, name='about'),
+    path('name/', views.name_page, name='name'),
+    path('send-email/', views.send_email, name='send_email'),  # Assuming you have this URL
+]

@@ -1,3 +1,4 @@
+#home/views.py
 from django.shortcuts import render, redirect
 from .models import ProjectLink, Name
 from django.core.mail import send_mail

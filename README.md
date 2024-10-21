@@ -41,3 +41,6 @@ about myself and to where futer recuters can easaly accses my best work
 
 8. **Install Versel**
    run "npm install -g vercel" to install
+
+9. **Add txt**
+   run "pip freeze > requirements.txt"

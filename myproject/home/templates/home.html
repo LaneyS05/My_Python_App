@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
-    <!-- Add Font Awesome CDN -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -18,18 +16,27 @@
       <a class="nav-link" href="{% url 'home' %}">Home</a>
       <a class="nav-link" href="{% url 'links' %}">My Projects</a>
       <a class="nav-link" href="{% url 'about' %}">About Me</a>
-      <a class="nav-link" href="{%url 'name' %}">Name Entry</a>
-      <img class="imgs" src="../static/assets/owl.png" />
+      <a class="nav-link" href="{% url 'name' %}">Name Entry</a>
+      <img class="imgs" src="{% static 'assets/owl.png' %}" alt="Owl" />
     </nav>
-    <img class="my-image" src="{% static 'assets/girl.jpg' %}" />
-    <h1>Welcome to Laney Staggs' Portfolio</h1>
-    <p>Front-End Developer | Python Enthusiast | Lover of Greek Mythology</p>
-    <p class="goddess">
-      This image is designed to depict a Greek goddess working on a computer,
-      reflecting my interest in blending classical mythology with modern
-      technology. I have a particular passion for Greek mythology, which
-      inspires much of my work
-    </p>
+
+    <div class="main-content">
+      <h1>Welcome to Laney Staggs' Portfolio</h1>
+      <p>Front-End Developer | Python Enthusiast | Lover of Greek Mythology</p>
+      <p class="goddess">
+        This image is designed to depict a Greek goddess working on a computer,
+        reflecting my interest in blending classical mythology with modern
+        technology. I have a particular passion for Greek mythology, which
+        inspires much of my work.
+      </p>
+    </div>
+
+    <img
+      class="my-image"
+      src="{% static 'assets/girl.jpg' %}"
+      alt="Greek Goddess"
+    />
+
     <footer>
       <nav class="foot">
         <button

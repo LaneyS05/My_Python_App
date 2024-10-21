@@ -1,3 +1,4 @@
+/* main.css*/
 body {
   background-color: #F5F5F5;
 }
@@ -118,4 +119,78 @@ nav {
   position: absolute;
   right: 20px;
   color: aliceblue;
+}
+
+/* Base styles (for larger screens) remain as you provided */
+
+/* Adjust for mobile phones */
+@media screen and (max-width: 600px) {
+
+  .me_img {
+    right: 10px;        
+    top: 50px;
+    width: 250px;       
+    height: 350px;
+  }
+
+  .career {
+    width: 100%;       
+    font-size: medium;   
+  }
+
+  .project-link {
+    font-size: 14px;     
+    padding: 8px;
+    max-width: 100%;     
+  }
+
+  .project-link a {
+    font-size: 14px;     
+  }
+
+  body {
+    padding: 10px;       
+  }
+
+  p {
+    width: 100%;         
+    font-size: medium;
+  }
+
+  h1 {
+    font-size: 1.5em;    
+  }
+
+  .my-image {
+    width: 100%;         
+    height: auto;        
+    top: 10px;
+    right: 0;
+  }
+
+  nav {
+    flex-direction: column; 
+    padding: 5px;
+  }
+
+  .nav-link {
+    font-size: medium;
+    margin: 5px 0;       
+  }
+
+  .foot {
+    position: relative;  
+    height: auto;
+    flex-direction: column;  
+  }
+
+  .mail, .ghost, .goddess {
+    position: static;    
+    margin: 5px 0;
+  }
+
+  .imgs {
+    width: 50px;         
+    height: 50px;
+  }
 }

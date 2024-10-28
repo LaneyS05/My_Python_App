@@ -19,12 +19,12 @@ from django.urls import path, include
 from django.http import HttpResponse
 
 def empty_favicon(request):
-    return HttpResponse(status=204)  # 204 No Content
+    return HttpResponse(status=204)  
 
 urlpatterns = [
-    path('favicon.ico', empty_favicon),  # Suppresses 404 for missing favicon.ico
+    path('favicon.ico', empty_favicon),  
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  # Includes the URLs from the home app
+    path('', include('home.urls')),  
 ]
 
 

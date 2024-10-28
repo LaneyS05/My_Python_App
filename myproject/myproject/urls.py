@@ -16,9 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import HttpResponse
+
+def empty_favicon(request):
+    return HttpResponse(status=204)  # 204 No Content
 
 urlpatterns = [
+    path('favicon.ico', empty_favicon),  # Suppresses 404 for missing favicon.ico
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  # This should work to include the URLs from the home app
+    path('', include('home.urls')),  # Includes the URLs from the home app
 ]
+
 

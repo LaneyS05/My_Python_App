@@ -44,3 +44,9 @@ about myself and to where futer recuters can easaly accses my best work
 
 9. **Add txt**
    run "pip freeze > requirements.txt"
+
+### Why so many commits
+
+I attempted to use Vercel for deployment but struggled to get it working. After Vercel, I also tried Railway and Glitch, but I encountered issues with both platforms. This explains the numerous commits in my project.
+
+If anyone has any tips or advice, I would greatly appreciate your insights!

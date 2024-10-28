@@ -1,4 +1,4 @@
-#home/views.py
+# home/views.py
 from django.shortcuts import render, redirect
 from .models import ProjectLink, Name
 from django.core.mail import send_mail
@@ -11,7 +11,6 @@ def link_page(request):
     links = ProjectLink.objects.all()
     return render(request, 'home/link.html', {'links': links})
 
-
 def about_page(request):
     return render(request, 'home/about.html')
 
@@ -21,16 +20,16 @@ def name_page(request):
         max_length = 10
 
         if not user_name.isalpha():
-            return render(request, 'name_page.html', {'error': "Numbers are not allowed."})
+            return render(request, 'home/name.html', {'error': "Numbers are not allowed."})
         elif user_name.isupper() or user_name.islower():
-            return render(request, 'name_page.html', {'error': "Please capitalize your name properly."})
+            return render(request, 'home/name.html', {'error': "Please capitalize your name properly."})
         elif len(user_name) > max_length:
-            return render(request, 'name_page.html', {'error': "Your name is too long."})
+            return render(request, 'home/name.html', {'error': "Your name is too long."})
         else:
             Name.objects.create(name=user_name)
             return redirect('home')  
 
-    return render(request, 'name.html')
+    return render(request, 'home/name.html')  # Ensure this path is correct
 
 def send_email(request):
     if request.method == 'POST':
@@ -43,6 +42,7 @@ def send_email(request):
             user_email,
             ['laney.staggs05@gmail.com'],
         )
-        return render(request, 'email_sent.html')
+        return render(request, 'home/email_sent.html')  # Make sure this path is correct
     
-    return render(request, 'email_sent.html')
+    return render(request, 'home/email_sent.html')  # Adjust path if necessary
+

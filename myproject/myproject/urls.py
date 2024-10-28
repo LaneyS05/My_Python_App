@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  # Make sure your home app URLs are included
+    path('', include('home.urls')),  # This should work to include the URLs from the home app
 ]
+

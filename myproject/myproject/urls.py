@@ -16,9 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import logging
 from django.http import HttpResponse
 
+logger = logging.getLogger(__name__)
+
 def empty_favicon(request):
+    logger.info("Favicon requested")
     return HttpResponse(status=204)  
 
 urlpatterns = [

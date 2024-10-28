@@ -5,15 +5,15 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 def home_view(request):
-    return render(request, 'home.html')
+    return render(request, 'home/home.html')
 
 def link_page(request):
     links = ProjectLink.objects.all()
-    return render(request, 'link.html', {'links': links})
+    return render(request, 'home/link.html', {'links': links})
 
 
 def about_page(request):
-    return render(request, 'about.html')
+    return render(request, 'home/about.html')
 
 def name_page(request):
     if request.method == 'POST':

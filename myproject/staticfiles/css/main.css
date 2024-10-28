@@ -87,8 +87,9 @@ nav {
   justify-content: center;
 }
 
-.mail i {
-  font-size: 20px; 
+.icon {
+  width: 20px; 
+  height: 20px;
   align-items: center;
   justify-content: center;
 }

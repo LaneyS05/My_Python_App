@@ -1,11 +1,11 @@
-import logging
+# middleware.py
 from django.http import HttpResponse
-from django.utils.deprecation import MiddlewareMixin  # Import MiddlewareMixin
 
-logger = logging.getLogger(__name__)
+class FaviconRedirectMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
 
-class FaviconMiddleware(MiddlewareMixin):
-    def process_request(self, request):
+    def __call__(self, request):
         if request.path == '/favicon.ico':
-            logger.info("Favicon requested, returning 204")
-            return HttpResponse(status=204)  # No Content
+            return HttpResponse(status=204)  # No Content response
+        return self.get_response(request)

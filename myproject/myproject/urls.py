@@ -19,20 +19,14 @@ from django.urls import path, include
 import logging
 from django.http import HttpResponse
 
-# Set up logging
 logger = logging.getLogger(__name__)
 
-# View to handle favicon requests
 def empty_favicon(request):
     logger.info("Favicon requested")
-    return HttpResponse(status=204)  # No Content response
+    return HttpResponse(status=204)  
 
-# URL configuration
 urlpatterns = [
-    path('favicon.ico', empty_favicon),  # Handle favicon requests
+    path('favicon.ico', empty_favicon),  
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  # Main app routes
+    path('', include('home.urls')),  
 ]
-
-
-

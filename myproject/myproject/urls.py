@@ -16,17 +16,23 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 import logging
 from django.http import HttpResponse
 
+# Set up logging
 logger = logging.getLogger(__name__)
 
+# View to handle favicon requests
 def empty_favicon(request):
-    logger.info("Favicon requested")
-    return HttpResponse(status=204)  
+    logger.info("Favicon requested, returning 204")
+    return HttpResponse(status=204)  # No Content response
 
+# URL configuration
 urlpatterns = [
-    path('favicon.ico', empty_favicon),  
+    path('favicon.ico', empty_favicon),  # Handle favicon requests
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),  
-]
+    path('', include('home.urls')),  # Main app routes
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Serve static files
+
